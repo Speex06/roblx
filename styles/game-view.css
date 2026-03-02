@@ -1,0 +1,180 @@
+@import './variables.css';
+@import './reset.css';
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: default;
+  background: #87ceeb;
+}
+
+#game-canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  cursor: crosshair;
+}
+
+/* ── Loading Screen ── */
+#loading-screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #12141a;
+  z-index: 200;
+  transition: opacity 0.6s ease;
+}
+
+#loading-screen.done {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-content {
+  text-align: center;
+}
+
+.loading-logo {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  background: var(--accent-green);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.loading-content h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.loading-bar {
+  width: 240px;
+  height: 4px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.loading-bar__fill {
+  height: 100%;
+  width: 0%;
+  background: var(--accent-green);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* ── Pointer Lock Overlay ── */
+#pointer-lock-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+#pointer-lock-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lock-prompt {
+  text-align: center;
+  color: var(--text-primary);
+  max-width: 480px;
+}
+
+.lock-prompt__icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 16px;
+  background: var(--accent-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #fff;
+  padding-left: 4px;
+  box-shadow: 0 0 30px rgba(0, 176, 111, 0.4);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 176, 111, 0.3); transform: scale(1); }
+  50% { box-shadow: 0 0 40px rgba(0, 176, 111, 0.6); transform: scale(1.05); }
+}
+
+.lock-prompt h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.lock-prompt__subtitle {
+  font-size: var(--font-size-md);
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.lock-prompt__controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 24px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.control-group span {
+  margin-left: auto;
+  color: var(--text-muted);
+}
+
+kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  font-size: 11px;
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.lock-prompt__hint {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+.lock-prompt__hint kbd {
+  margin: 0 2px;
+}

@@ -1,0 +1,26 @@
+.category-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.category-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+}
+
+.category-section__title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+}
+
+.category-section__see-all {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: color 0.15s;
+}
+
+.category-section__see-all:hover {
+  color: var(--text-primary);
+}

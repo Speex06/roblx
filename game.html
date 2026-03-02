@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roblx - Obby</title>
+  <link rel="stylesheet" href="/styles/game-view.css" />
+  <link rel="stylesheet" href="/styles/hud.css" />
+</head>
+<body>
+  <canvas id="game-canvas"></canvas>
+  <div id="hud"></div>
+  <div id="pointer-lock-overlay">
+    <div class="lock-prompt">
+      <div class="lock-prompt__icon">&#9654;</div>
+      <h2>Roblx Obby</h2>
+      <p class="lock-prompt__subtitle">Click anywhere to start playing</p>
+      <div class="lock-prompt__controls">
+        <div class="control-group">
+          <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd>
+          <span>Move</span>
+        </div>
+        <div class="control-group">
+          <kbd>Space</kbd>
+          <span>Jump</span>
+        </div>
+        <div class="control-group">
+          <kbd>Shift</kbd>
+          <span>Sprint</span>
+        </div>
+        <div class="control-group">
+          <kbd>RMB</kbd>
+          <span>Rotate camera</span>
+        </div>
+      </div>
+      <p class="lock-prompt__hint">Jump across platforms to reach the finish!</p>
+    </div>
+  </div>
+  <div id="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo">R</div>
+      <h2>Loading Obby...</h2>
+      <div class="loading-bar"><div class="loading-bar__fill"></div></div>
+    </div>
+  </div>
+  <script type="module" src="/src/game-main.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+:root {
+  --bg-primary: #191b20;
+  --bg-secondary: #232527;
+  --bg-sidebar: #1a1c20;
+  --bg-topnav: #232527;
+  --bg-hover: #2d2f33;
+  --bg-active: #3a3c40;
+  --text-primary: #ffffff;
+  --text-secondary: #bdbebe;
+  --text-muted: #838384;
+  --accent-green: #00b06f;
+  --accent-green-hover: #00c97e;
+  --accent-blue: #0074bd;
+  --accent-red: #e34d4d;
+  --border-color: #393b3d;
+  --card-radius: 8px;
+  --sidebar-width: 232px;
+  --topnav-height: 56px;
+  --font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-size-xs: 11px;
+  --font-size-sm: 13px;
+  --font-size-md: 15px;
+  --font-size-lg: 20px;
+  --font-size-xl: 28px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+}

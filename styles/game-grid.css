@@ -1,0 +1,17 @@
+.game-grid {
+  display: flex;
+  gap: var(--spacing-md);
+  overflow-x: auto;
+  padding-bottom: var(--spacing-sm);
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.game-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.game-grid .game-card {
+  scroll-snap-align: start;
+}

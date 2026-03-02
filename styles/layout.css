@@ -1,0 +1,36 @@
+#app {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  grid-template-rows: var(--topnav-height) 1fr;
+  grid-template-areas:
+    "sidebar topnav"
+    "sidebar content";
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border-color);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.topnav {
+  grid-area: topnav;
+  background: var(--bg-topnav);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--spacing-lg);
+  gap: var(--spacing-md);
+}
+
+.content {
+  grid-area: content;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: var(--spacing-lg);
+}
